@@ -4,4 +4,7 @@ ext{
     minSdkVersion = 16
     targetSdkVersion = 22
     supportVersion='26.1.0'
+    rxjava='2.1.6'
+    rxAndroid='2.0.1'
+    retrofit='2.3.0'
 }
