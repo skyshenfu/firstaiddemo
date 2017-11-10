@@ -25,15 +25,19 @@ android {
         testApplicationId  "com.app286.testfirstaid"
         testHandleProfiling true
         testFunctionalTest true
+        manifestPlaceholders this.setThridAppKey()
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "Integer","TYPENUMBER","4396"
+
         }
         debug{
             buildConfigField "Integer","TYPENUMBER","9527"
+
         }
     }
     productFlavors{
@@ -74,6 +78,11 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-scalars:$rootProject.retrofit"
     implementation "com.github.ybq:Android-SpinKit:1.1.0"
 }
+
+
+
+
+
 //实际上这个方法是用来获取当前分支上最新的一个TAG并且将TAGName转化为buildconfig的veesionname
 def getTagName(){
     def stdout=new ByteArrayOutputStream()
@@ -94,4 +103,12 @@ def getTagNumber(){
         standardOutput=stdout
     }
     return  stdout.toString().split('\n').size()
+}
+//设置第三方key的方法
+def setThridAppKey(){
+    return [
+            "AMAPKEY":"76581c91ca6f9fdacfd8c2c003053013",
+            "UMENGKEY":"58099cec7666136942002ea5",
+            "JPUSHKEY":"0fed32ee6980af16e5c65be0"
+    ]
 }

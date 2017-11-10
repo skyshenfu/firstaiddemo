@@ -23,5 +23,5 @@ class HomeFragmentPresenter(context:Context,view:HomeFragmentView): BaseMvpPrese
     val HomeFragmentModel by lazy {
         HomeFragmentModel()
     }
-    
+
 }
