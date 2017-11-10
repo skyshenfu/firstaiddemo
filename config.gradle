@@ -1,0 +1,7 @@
+ext{
+    kotlin_version='1.1.51'
+    compileSdkVersion = 26
+    minSdkVersion = 16
+    targetSdkVersion = 22
+    supportVersion='26.1.0'
+}
